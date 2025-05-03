@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+main {
+    margin-left: 20px;
+}
+
+.nav-pills {
+    margin-left: 20px;
+    width: 80%;
+}

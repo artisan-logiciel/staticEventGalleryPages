@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements - Street Art Festival</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="alternate" type="application/rss+xml" title="Street Art Festival RSS" href="rss.xml">
+</head>
+<body>
+<!-- Navigation Responsive Améliorée -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <!-- Logo et nom du site -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <i class="bi bi-brush me-2"></i>
+            Street Art Festival
+        </a>
+
+        <!-- Bouton hamburger pour mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu principal -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="bi bi-house-door d-lg-none me-2"></i>Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="artists.html">
+                        <i class="bi bi-palette d-lg-none me-2"></i>Artistes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="events.html">
+                        <i class="bi bi-calendar-event d-lg-none me-2"></i>Événements
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        <i class="bi bi-envelope d-lg-none me-2"></i>Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rss.xml" target="_blank">
+                        <i class="bi bi-rss me-1"></i>
+                        <span class="d-lg-none d-inline">Flux RSS</span>
+                        <span class="d-none d-lg-inline rss-badge">RSS</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="page-header">
+    <div class="overlay"></div>
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold text-white">Événements</h1>
+                <p class="lead text-white">Découvrez nos événements à venir et passés</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Events Filter -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <ul class="nav nav-pills justify-content-center" id="eventsTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="upcoming-tab" data-bs-toggle="pill" data-bs-target="#upcoming" type="button" role="tab" aria-controls="upcoming" aria-selected="true">À venir</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="past-tab" data-bs-toggle="pill" data-bs-target="#past" type="button" role="tab" aria-controls="past" aria-selected="false">Passés</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tab-content" id="eventsTabContent">
+            <!-- Upcoming Events -->
+            <div class="tab-pane fade show active" id="upcoming" role="tabpanel" aria-labelledby="upcoming-tab">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 event-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/placeholder.svg?height=300&width=300" class="img-fluid rounded-start h-100" alt="Exposition de graffiti" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Exposition de Graffiti</h5>
+                                        <p class="card-text">Une exposition présentant les œuvres des meilleurs artistes de graffiti locaux et internationaux.</p>
+                                        <p class="text-muted"><i class="bi bi-calendar"></i> 15 Juin 2025</p>
+                                        <p class="text-muted"><i class="bi bi-geo-alt"></i> Galerie Urbaine, Centre-ville</p>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal1">Détails</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 event-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/placeholder.svg?height=300&width=300" class="img-fluid rounded-start h-100" alt="Atelier de street art" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Atelier de Street Art</h5>
+                                        <p class="card-text">Apprenez les techniques de base du street art avec nos artistes professionnels.</p>
+                                        <p class="text-muted"><i class="bi bi-calendar"></i> 22 Juin 2025</p>
+                                        <p class="text-muted"><i class="bi bi-geo-alt"></i> Parc Municipal</p>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal2">Détails</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 event-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/placeholder.svg?height=300&width=300" class="img-fluid rounded-start h-100" alt="Concours de murale" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Concours de Murale</h5>
+                                        <p class="card-text">Participez à notre concours annuel de création de murales et gagnez des prix exceptionnels.</p>
+                                        <p class="text-muted"><i class="bi bi-calendar"></i> 5 Juillet 2025</p>
+                                        <p class="text-muted"><i class="bi bi-geo-alt"></i> Quartier des Arts</p>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal3">Détails</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 event-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/placeholder.svg?height=300&width=300" class="img-fluid rounded-start h-100" alt="Festival de rue" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Festival de Rue</h5>
+                                        <p class="card-text">Un week-end complet dédié à l'art urbain avec performances live, musique et nourriture.</p>
+                                        <p class="text-muted"><i class="bi bi-calendar"></i> 20-22 Juillet 2025</p>
+                                        <p class="text-muted"><i class="bi bi-geo-alt"></i> Place Centrale</p>
+                                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal4">Détails</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Events -->
+            <div class="tab-pane fade" id="past" role="tabpanel" aria-labelledby="past-tab">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 event-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/placeholder.svg?height=300&width=300" class="img-fluid rounded-start h-100" alt="Exposition urbaine" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Exposition Urbaine 2024</h5>
+                                        <p class="card-text">Rétrospective des meilleures œuvres de street art de l'année précédente.</p>
+                                        <p class="text-muted"><i class="bi bi-calendar"></i> 10 Janvier 2024</p>
+                                        <p class="text-muted"><i class="bi bi-geo-alt"></i> Musée d'Art Contemporain</p>
+                                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#pastEventModal1">Galerie photos</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 event-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/placeholder.svg?height=300&width=300" class="img-fluid rounded-start h-100" alt="Concours de graffiti" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Concours de Graffiti 2024</h5>
+                                        <p class="card-text">Compétition annuelle qui a réuni plus de 50 artistes de graffiti du monde entier.</p>
+                                        <p class="text-muted"><i class="bi bi-calendar"></i> 15 Mars 2024</p>
+                                        <p class="text-muted"><i class="bi bi-geo-alt"></i> Friche Industrielle</p>
+                                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#pastEventModal2">Galerie photos</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 event-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="/placeholder.svg?height=300&width=300" class="img-fluid rounded-start h-100" alt="Workshop street art" style="object-fit: cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Workshop Street Art</h5>
+                                        <p class="card-text">Série d'ateliers pour les jeunes artistes en herbe, animés par des professionnels.</p>
+                                        <p class="text-muted"><i class="bi bi-calendar"></i> 5-7 Mai 2024</p>
+                                        <p class="text-muted"><i class="bi bi-geo-alt"></i> Centre Culturel</p>
+                                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#pastEventModal3">Galerie photos</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Event Modals -->
+<!-- Event Modal 1 -->
+<div class="modal fade" id="eventModal1" tabindex="-1" aria-labelledby="eventModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eventModal1Label">Exposition de Graffiti</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="/placeholder.svg?height=400&width=800" class="img-fluid mb-3" alt="Exposition de graffiti">
+                <h6><i class="bi bi-calendar"></i> Date: 15 Juin 2025</h6>
+                <h6><i class="bi bi-geo-alt"></i> Lieu: Galerie Urbaine, Centre-ville</h6>
+                <h6><i class="bi bi-clock"></i> Horaires: 10h00 - 18h00</h6>
+                <hr>
+                <p>Une exposition présentant les œuvres des meilleurs artistes de graffiti locaux et internationaux. Venez découvrir des styles variés, des techniques innovantes et des messages puissants exprimés à travers l'art urbain.</p>
+                <p>L'exposition comprendra:</p>
+                <ul>
+                    <li>Plus de 50 œuvres originales</li>
+                    <li>Des installations interactives</li>
+                    <li>Des démonstrations en direct</li>
+                    <li>Des conférences avec les artistes</li>
+                </ul>
+                <p>Entrée: 10€ (gratuit pour les moins de 12 ans)</p>
+                <p>Réservation recommandée pour les visites guidées et les conférences.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary">Réserver</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Event Modal 2 -->
+<div class="modal fade" id="eventModal2" tabindex="-1" aria-labelledby="eventModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eventModal2Label">Atelier de Street Art</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="/placeholder.svg?height=400&width=800" class="img-fluid mb-3" alt="Atelier de street art">
+                <h6><i class="bi bi-calendar"></i> Date: 22 Juin 2025</h6>
+                <h6><i class="bi bi-geo-alt"></i> Lieu: Parc Municipal</h6>
+                <h6><i class="bi bi-clock"></i> Horaires: 14h00 - 17h00</h6>
+                <hr>
+                <p>Apprenez les techniques de base du street art avec nos artistes professionnels. Cet atelier pratique vous permettra de découvrir différentes méthodes et styles, du pochoir au graffiti en passant par le collage urbain.</p>
+                <p>L'atelier comprend:</p>
+                <ul>
+                    <li>Tout le matériel nécessaire</li>
+                    <li>Des conseils personnalisés</li>
+                    <li>Une introduction aux différentes techniques</li>
+                    <li>La possibilité de créer votre propre œuvre</li>
+                </ul>
+                <p>Tarif: 25€ par personne (matériel inclus)</p>
+                <p>Places limitées à 15 participants. Réservation obligatoire.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary">Réserver</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Past Event Modal 1 -->
+<div class="modal fade" id="pastEventModal1" tabindex="-1" aria-labelledby="pastEventModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pastEventModal1Label">Galerie Photos - Exposition Urbaine 2024</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Photo exposition 1">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Photo exposition 2">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Photo exposition 3">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Photo exposition 4">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Photo exposition 5">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Photo exposition 6">
+                    </div>
+                </div>
+                <hr>
+                <h6>Résumé de l'événement</h6>
+                <p>L'Exposition Urbaine 2024 a été un grand succès avec plus de 1000 visiteurs sur trois jours. L'événement a mis en lumière le travail de 25 artistes locaux et internationaux, présentant une variété de styles et de techniques.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-4 bg-black text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>Street Art Festival</h5>
+                <p>Célébrons l'art urbain et la créativité dans les espaces publics.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Liens rapides</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white">Accueil</a></li>
+                    <li><a href="events.html" class="text-white">Événements</a></li>
+                    <li><a href="artists.html" class="text-white">Artistes</a></li>
+                    <li><a href="contact.html" class="text-white">Contact</a></li>
+                    <li><a href="about.html" class="text-white">À propos</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Suivez-nous</h5>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+                    <a href="rss.xml" class="text-white"><i class="bi bi-rss fs-4"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4 bg-light">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2025 Street Art Festival. Tous droits réservés.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="mb-0">Conçu avec <i class="bi bi-heart-fill text-danger"></i> pour l'art urbain</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

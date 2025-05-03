@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistes - Street Art Festival</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="alternate" type="application/rss+xml" title="Street Art Festival RSS" href="rss.xml">
+</head>
+<body>
+<!-- Navigation Responsive Améliorée -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <!-- Logo et nom du site -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <i class="bi bi-brush me-2"></i>
+            Street Art Festival
+        </a>
+
+        <!-- Bouton hamburger pour mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu principal -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="bi bi-house-door d-lg-none me-2"></i>Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="artists.html">
+                        <i class="bi bi-palette d-lg-none me-2"></i>Artistes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="events.html">
+                        <i class="bi bi-calendar-event d-lg-none me-2"></i>Événements
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">
+                        <i class="bi bi-envelope d-lg-none me-2"></i>Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rss.xml" target="_blank">
+                        <i class="bi bi-rss me-1"></i>
+                        <span class="d-lg-none d-inline">Flux RSS</span>
+                        <span class="d-none d-lg-inline rss-badge">RSS</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="page-header">
+    <div class="overlay"></div>
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold text-white">Artistes</h1>
+                <p class="lead text-white">Découvrez les talents qui font vivre notre festival</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Artists Filter -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="d-flex justify-content-center">
+                    <div class="btn-group" role="group" aria-label="Filtres artistes">
+                        <button type="button" class="btn btn-outline-primary active filter-btn" data-filter="all">Tous</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="graffiti">Graffiti</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="murale">Murale</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="stencil">Pochoir</button>
+                        <button type="button" class="btn btn-outline-primary filter-btn" data-filter="paste-up">Collage</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="artists-grid">
+            <!-- Artist 1 -->
+            <div class="col-md-4 mb-4 artist-item" data-category="graffiti">
+                <div class="card h-100 artist-card">
+                    <img src="/placeholder.svg?height=400&width=400" class="card-img-top" alt="Alex Graffeur">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Alex Graffeur</h5>
+                        <p class="badge bg-primary mb-2">Graffiti</p>
+                        <p class="card-text">Spécialiste du graffiti abstrait et des compositions colorées. Alex travaille depuis plus de 15 ans dans l'art urbain et a exposé dans plusieurs pays européens.</p>
+                        <div class="social-icons mb-3">
+                            <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-dark"><i class="bi bi-globe"></i></a>
+                        </div>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#artistModal1">Voir le portfolio</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artist 2 -->
+            <div class="col-md-4 mb-4 artist-item" data-category="murale">
+                <div class="card h-100 artist-card">
+                    <img src="/placeholder.svg?height=400&width=400" class="card-img-top" alt="Sophie Murale">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Sophie Murale</h5>
+                        <p class="badge bg-primary mb-2">Murale</p>
+                        <p class="card-text">Connue pour ses murales géantes et ses portraits réalistes. Sophie a transformé des façades d'immeubles dans le monde entier avec ses œuvres monumentales.</p>
+                        <div class="social-icons mb-3">
+                            <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-dark"><i class="bi bi-globe"></i></a>
+                        </div>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#artistModal2">Voir le portfolio</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artist 3 -->
+            <div class="col-md-4 mb-4 artist-item" data-category="stencil">
+                <div class="card h-100 artist-card">
+                    <img src="/placeholder.svg?height=400&width=400" class="card-img-top" alt="Marco Stencil">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Marco Stencil</h5>
+                        <p class="badge bg-primary mb-2">Pochoir</p>
+                        <p class="card-text">Maître du pochoir et des compositions urbaines engagées. Ses œuvres abordent souvent des thèmes sociaux et politiques avec un style distinctif.</p>
+                        <div class="social-icons mb-3">
+                            <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-dark"><i class="bi bi-globe"></i></a>
+                        </div>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#artistModal3">Voir le portfolio</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artist 4 -->
+            <div class="col-md-4 mb-4 artist-item" data-category="paste-up">
+                <div class="card h-100 artist-card">
+                    <img src="/placeholder.svg?height=400&width=400" class="card-img-top" alt="Léa Paste-up">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Léa Paste-up</h5>
+                        <p class="badge bg-primary mb-2">Collage</p>
+                        <p class="card-text">Spécialiste du collage urbain et des installations éphémères. Léa transforme les espaces urbains avec ses collages poétiques et colorés.</p>
+                        <div class="social-icons mb-3">
+                            <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-dark"><i class="bi bi-globe"></i></a>
+                        </div>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#artistModal4">Voir le portfolio</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artist 5 -->
+            <div class="col-md-4 mb-4 artist-item" data-category="graffiti">
+                <div class="card h-100 artist-card">
+                    <img src="/placeholder.svg?height=400&width=400" class="card-img-top" alt="Thomas Wild">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Thomas Wild</h5>
+                        <p class="badge bg-primary mb-2">Graffiti</p>
+                        <p class="card-text">Pionnier du graffiti sauvage reconverti dans l'art urbain légal. Son style unique mélange lettrage complexe et personnages fantastiques.</p>
+                        <div class="social-icons mb-3">
+                            <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-dark"><i class="bi bi-globe"></i></a>
+                        </div>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#artistModal5">Voir le portfolio</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artist 6 -->
+            <div class="col-md-4 mb-4 artist-item" data-category="murale">
+                <div class="card h-100 artist-card">
+                    <img src="/placeholder.svg?height=400&width=400" class="card-img-top" alt="Elena Colors">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Elena Colors</h5>
+                        <p class="badge bg-primary mb-2">Murale</p>
+                        <p class="card-text">Artiste internationale spécialisée dans les fresques géométriques et colorées. Ses œuvres apportent de la vie et de la couleur aux quartiers urbains.</p>
+                        <div class="social-icons mb-3">
+                            <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-dark"><i class="bi bi-globe"></i></a>
+                        </div>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#artistModal6">Voir le portfolio</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Artist Modals -->
+<!-- Artist Modal 1 -->
+<div class="modal fade" id="artistModal1" tabindex="-1" aria-labelledby="artistModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="artistModal1Label">Portfolio - Alex Graffeur</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <img src="/placeholder.svg?height=400&width=400" class="img-fluid rounded" alt="Alex Graffeur">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Alex Graffeur</h4>
+                        <p class="badge bg-primary mb-2">Graffiti</p>
+                        <p>Spécialiste du graffiti abstrait et des compositions colorées. Alex travaille depuis plus de 15 ans dans l'art urbain et a exposé dans plusieurs pays européens.</p>
+                        <p>Originaire de Lyon, Alex a commencé le graffiti à l'âge de 16 ans. Après des études d'arts plastiques, il a développé un style unique qui mélange lettrage traditionnel et abstraction géométrique.</p>
+                        <div class="social-icons mb-3">
+                            <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-dark me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-dark"><i class="bi bi-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <h5>Œuvres récentes</h5>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Œuvre 1">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Œuvre 2">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Œuvre 3">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Œuvre 4">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Œuvre 5">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <img src="/placeholder.svg?height=200&width=300" class="img-fluid" alt="Œuvre 6">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                <a href="contact.html" class="btn btn-primary">Contacter l'artiste</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-4 bg-black text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>Street Art Festival</h5>
+                <p>Célébrons l'art urbain et la créativité dans les espaces publics.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Liens rapides</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white">Accueil</a></li>
+                    <li><a href="events.html" class="text-white">Événements</a></li>
+                    <li><a href="artists.html" class="text-white">Artistes</a></li>
+                    <li><a href="contact.html" class="text-white">Contact</a></li>
+                    <li><a href="about.html" class="text-white">À propos</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Suivez-nous</h5>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a>
+                    <a href="rss.xml" class="text-white"><i class="bi bi-rss fs-4"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4 bg-light">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2025 Street Art Festival. Tous droits réservés.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="mb-0">Conçu avec <i class="bi bi-heart-fill text-danger"></i> pour l'art urbain</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

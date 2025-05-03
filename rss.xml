@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Street Art Festival</title>
+        <link>https://www.streetartfestival.com/</link>
+        <description>Actualités et mises à jour du Street Art Festival</description>
+        <language>fr-fr</language>
+        <lastBuildDate>Sat, 04 May 2025 12:00:00 GMT</lastBuildDate>
+        <atom:link href="https://www.streetartfestival.com/rss.xml" rel="self" type="application/rss+xml" />
+
+        <item>
+            <title>Ouverture des inscriptions pour le concours de murales 2025</title>
+            <link>https://www.streetartfestival.com/events.html</link>
+            <pubDate>Sat, 04 May 2025 10:00:00 GMT</pubDate>
+            <guid>https://www.streetartfestival.com/events.html#concours-2025</guid>
+            <description>
+                Les inscriptions pour le concours annuel de création de murales sont désormais ouvertes.
+                Cette année, le thème sera "Urbanité et Nature". Les artistes sélectionnés auront l'opportunité
+                de créer une œuvre sur un mur de 5x10m dans le centre-ville. Date limite d'inscription : 15 juin 2025.
+            </description>
+        </item>
+
+        <item>
+            <title>Nouvel artiste international confirmé : Elena Colors</title>
+            <link>https://www.streetartfestival.com/artists.html</link>
+            <pubDate>Fri, 03 May 2025 14:30:00 GMT</pubDate>
+            <guid>https://www.streetartfestival.com/artists.html#elena-colors</guid>
+            <description>
+                Nous sommes ravis d'annoncer la participation d'Elena Colors, artiste internationale
+                reconnue pour ses fresques géométriques et colorées. Elena présentera une nouvelle
+                œuvre exclusive lors du festival et animera également un atelier le 22 juin.
+            </description>
+        </item>
+
+        <item>
+            <title>Programme des ateliers pour enfants dévoilé</title>
+            <link>https://www.streetartfestival.com/events.html</link>
+            <pubDate>Wed, 01 May 2025 09:15:00 GMT</pubDate>
+            <guid>https://www.streetartfestival.com/events.html#ateliers-enfants</guid>
+            <description>
+                Le programme complet des ateliers pour enfants est maintenant disponible.
+                Cette année, nous proposons des sessions adaptées à différentes tranches d'âge (4-7 ans, 8-12 ans, 13-16 ans)
+                avec des techniques variées : pochoir, collage, peinture à la bombe écologique, etc.
+                Réservation obligatoire, places limitées.
+            </description>
+        </item>
+
+        <item>
+            <title>Appel aux bénévoles pour l'édition 2025</title>
+            <link>https://www.streetartfestival.com/contact.html</link>
+            <pubDate>Mon, 28 Apr 2025 16:45:00 GMT</pubDate>
+            <guid>https://www.streetartfestival.com/contact.html#benevoles</guid>
+            <description>
+                Vous souhaitez participer à l'organisation du festival ? Nous recherchons des bénévoles
+                pour différentes missions : accueil du public, assistance aux artistes, logistique,
+                médiation culturelle, etc. Contactez-nous via le formulaire en ligne pour plus d'informations.
+            </description>
+        </item>
+
+        <item>
+            <title>Rétrospective de l'édition 2024 en vidéo</title>
+            <link>https://www.streetartfestival.com/about.html</link>
+            <pubDate>Fri, 25 Apr 2025 11:20:00 GMT</pubDate>
+            <guid>https://www.streetartfestival.com/about.html#retrospective-2024</guid>
+            <description>
+                Revivez les moments forts de l'édition 2024 du Street Art Festival à travers
+                notre vidéo rétrospective. Interviews d'artistes, performances en direct,
+                réactions du public... Une immersion complète dans l'ambiance unique du festival.
+            </description>
+        </item>
+    </channel>
+</rss>

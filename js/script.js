@@ -1,4 +1,4 @@
-// Script principal pour le site Street Art Festival
+// Script principal pour le site backToSchool
 
 document.addEventListener("DOMContentLoaded", () => {
   // Animation des cartes d'événements
